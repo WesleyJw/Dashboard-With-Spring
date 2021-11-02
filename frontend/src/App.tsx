@@ -2,13 +2,32 @@ import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';
 import React from 'react';
 import DataTable from 'components/DataTable';
+import BarChart from 'components/BarChart';
+import DonutChart from 'components/DonutChart';
 
 function App() {
   return (
     <>
       <NavBar />
       <div className="container">
-          <h1 className="text-primary">Hello World</h1>
+          <h1 className="text-primary py-3">Vendas Dashboard</h1>
+          <div className="row px-3">
+            <div className="col-sm-6">
+              <h4 className="text-center text-secondary ">Vendedor Sucesso (%)*</h4>
+              <BarChart />
+              <p>*O gráfico de vendedor sucesso representa a proporção de vendas a cada cliente visitado.</p>
+            </div>
+            <div className="col-sm-6">
+              <h4 className="text-center text-secondary ">Total de Vendas</h4>
+              <DonutChart />
+            </div>
+
+            <div className="py-3">
+                <h2 className="text-primary">Total de Vendas</h2>
+            </div>
+
+          </div>
+
           <DataTable/>
       </div>
 
